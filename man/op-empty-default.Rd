@@ -3,7 +3,7 @@
 \name{op-empty-default}
 \alias{op-empty-default}
 \alias{\%|||\%}
-\title{Replace an empty vector with something else. Based on `\%||\%` from rlang.}
+\title{Replace an empty vector with something else.}
 \usage{
 x \%|||\% y
 }
@@ -11,10 +11,17 @@ x \%|||\% y
 \item{x, y}{if `x` is empty, will return `y`; otherwise returns `x`.}
 }
 \description{
-Replace an empty vector with something else. Based on `\%||\%` from rlang.
+Based on `\%||\%` from rlang.
 }
 \examples{
 c(1, 2)[1] \%|||\% NA_real_
 c(1, 2)[0] \%|||\% NA_real_
+
+df <- data.frame(
+  name   = c("a",   "a", "b", "c", "c", "a", "a"),
+  var    = c("hgt", "wt", "hgt", "wt", "hgt", "eye", "wt"),
+  value  = c(72, 225, 64, 60, 142, 2, 210)
+)
+df$value[df$name == "b" & df$var == "wt"] \%|||\% NA_real_
 
 }
