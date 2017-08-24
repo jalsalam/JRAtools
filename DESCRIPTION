@@ -1,0 +1,14 @@
+Package: JRAtools
+Title: My Package of R Utility Functions
+Version: 0.0.0.9000
+Authors@R: person("Jameel", "Alsalam", email = "jalsalam@gmail.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends: R (>= 3.4.0)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: rlang
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1
